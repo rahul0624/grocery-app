@@ -7,6 +7,7 @@ const NavBar = () => {
         className="navbar-toggler"
         type="button"
         data-toggle="collapse"
+        data-bs-toggle="dropdown"
         data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown"
         aria-expanded="false"
