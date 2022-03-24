@@ -1,0 +1,24 @@
+import React from "react";
+import NavBar from "../components/NavBar";
+import ProductList from "../components/ProductList";
+import Sidebar from "../components/Sidebar";
+
+const Products = () => {
+  return (
+    <div>
+      <NavBar />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-2">
+            <Sidebar />
+          </div>
+          <div className="col-10">
+            <ProductList />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Products;
