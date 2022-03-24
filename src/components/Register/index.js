@@ -1,10 +1,12 @@
+import axios from "axios";
 import React, { useState } from "react";
 
 const Register = () => {
 
     const [user, setUser] = useState({
-        name: '',
+        firstName: '',
         email: '',
+        mobile: '',
         password: ''
     })
 
@@ -15,43 +17,63 @@ const Register = () => {
         })
     }
 
+    const onSubmitHandler = (event) => {
+      event.preventDefault();
+      axios.post('https://apolis-grocery.herokuapp.com/api/auth/register',user)
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => console.log(error));
+    }
+
   return (
     <div className="flex justify-content-center">
         <h1 className="text-center">Register</h1>
-      <form className="col-6">
-      <div class="form-group">
-          <label for="exampleInputEmail1">Name</label>
+      <form className="col-6" onSubmit={onSubmitHandler}>
+      <div className="form-group">
+          <label>Name</label>
           <input
-            type="email"
-            class="form-control"
-            name="name"
+            type="text"
+            className="form-control"
+            name="firstName"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             onChange={onChangeHandler}
           />
         </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
+        <div className="form-group">
+          <label>Email</label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             name="email"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             onChange={onChangeHandler}
           />
         </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+        <div className="form-group">
+          <label >Mobile</label>
+          <input
+            type="text"
+            className="form-control"
+            name="mobile"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            onChange={onChangeHandler}
+          />
+        </div>
+        <div className="form-group">
+          <label >Password</label>
           <input
             type="password"
             name="password"
-            class="form-control"
+            className="form-control"
             id="exampleInputPassword1"
             onChange={onChangeHandler}
           />
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
           Register
         </button>
       </form>
