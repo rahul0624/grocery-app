@@ -1,16 +1,27 @@
 import React from "react";
 
 const Product = (props) => {
+
+  const {
+    quantity,
+    description,
+    productName,
+    image,
+    unit,
+    price,
+    mrp
+  } = props.data;
+
   return (
     <div className="col-sm-4">
-      <div className="card bg-primary mb-4">
+      <div className="card bg-light mb-4 h-70">
         <div className="card-body">
-          <h5 className="card-title">{props.name}</h5>
-          <p className="card-text">MRP: {props.mrp}</p>
-          <p className="card-text">Rs.{props.price}</p>
-          <p className="card-text">Description: {props.description}</p>
-          <p className="card-text">Quantity: {props.quantity}</p>
-          <p className="card-text">Unit: {props.unit}</p>
+          <img src={'http://rjtmobile.com/grocery/images/'+image} alt="" className="card-img-top"/>
+          <h5 className="card-title">{productName}</h5>
+          <p className="card-text">Rs.{price}</p>
+          <p className="card-text">Description: {description}</p>
+          <p className="card-text">Quantity: {quantity}</p>
+          <p className="card-text">Unit: {unit}</p>
           <button className="btn btn-danger">Add to Cart</button>
         </div>
       </div>

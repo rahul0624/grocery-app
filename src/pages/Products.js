@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import ProductList from "../components/ProductList";
 import Sidebar from "../components/Sidebar";
+import SubCategory from "../components/SubCategory";
 
 const Products = () => {
   return (
@@ -10,7 +11,7 @@ const Products = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-2">
-            <Sidebar />
+            <SubCategory />
           </div>
           <div className="col-10">
             <ProductList />
