@@ -24,7 +24,7 @@ const ProductList = (props) => {
   useEffect(() => {
     let url = "https://apolis-grocery.herokuapp.com/api/products";
 
-    if (id !== undefined) {
+    if (id) {
       let catId = "";
 
       axios
