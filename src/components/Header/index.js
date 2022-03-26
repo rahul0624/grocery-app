@@ -11,7 +11,7 @@ const Header = () => {
       <p>
         Very good Deals
       </p>
-      <a className="btn btn-primary btn-lg" href="#" role="button">
+      <a className="btn btn-primary btn-lg active" href="/about" role="button">
         Learn more
       </a>
     </div>

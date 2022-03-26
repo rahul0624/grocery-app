@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import ProductList from "../components/ProductList";
-import Sidebar from "../components/Sidebar";
 import SubCategory from "../components/SubCategory";
 
 const Products = () => {
