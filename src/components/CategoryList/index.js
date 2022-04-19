@@ -26,5 +26,7 @@ const CategoryList = () => {
     </div>
   );
 };
-
+/**
+ * lol
+ */
 export default CategoryList;
