@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./styles/index.css"
 
 const SubCategory = () => {
   const [subCategories, setSubCategories] = useState([]);
@@ -15,10 +16,10 @@ const SubCategory = () => {
   }, []);
 
   return (
-    <div>
-      <ul class="list-group">
+    <div className="sub-cat-list">
+      <ul class="list-group bg-light">
         {subCategories.map((sub) => (
-          <li key={sub.subId} class="list-group-item">
+          <li key={sub.subId} class="list-group-item bg-light">
             <Link to={'/products?subCat='+sub.subId+'&subName='+sub.subName}>{sub.subName}</Link>
           </li>
         ))}

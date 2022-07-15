@@ -62,7 +62,7 @@ const ProductList = (props) => {
 
   return (
     <div className="text-center">
-      {subName||id?<h1>{subName}</h1>:<h1>All Products</h1>}
+      {subName||id?<h2>{subName}</h2>:<h2>All Products</h2>}
       <div className="row">
         {products.map((product) => (
           <Product data={product} />
