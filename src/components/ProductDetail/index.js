@@ -24,7 +24,7 @@ const ProductDetail = () => {
     <div class="product-detail-container" id="product-section">
       <div class="row">
         <div class="col-md-6">
-          <img className="product-image" src="https://via.placeholder.com/500" alt="product-img" />
+          <img className="product-image" src={'http://rjtmobile.com/grocery/images/'+product.image} alt="product-img" />
         </div>
         <div class="col-md-6 product-meta">
           <h2>{product.productName}</h2>

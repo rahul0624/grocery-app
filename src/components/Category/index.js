@@ -7,7 +7,7 @@ const Category = (props) => {
       <div className="card bg-light mb-4">
         <a href={'/products/'+_id}>
           <img
-            src={"https://via.placeholder.com/200"}
+            src={'http://rjtmobile.com/grocery/images/'+catImage}
             alt=""
             className="card-img-top"
           />

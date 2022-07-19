@@ -1,3 +1,14 @@
-.product-list-bn{
+.product-list-bn {
     margin-left: 40px;
+}
+
+.prod-img-container {
+    border: 5px solid rgb(14, 169, 236);
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    overflow: hidden;
 }
